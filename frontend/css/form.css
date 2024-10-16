@@ -1,0 +1,122 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Navbar styling */
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999; /* Ensure navbar stays on top */
+}
+
+.navbar-container {
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 100px;
+}
+
+.container {
+    justify-content: center;
+    justify-items: center;
+}
+/* Form styling */
+.form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+}
+
+.heading {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.subheading {
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group .auth-input-logo {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+.user-icon {
+    background: url('../icons/user-icon.png') no-repeat center;
+    background-size: contain;
+}
+
+.pass-icon {
+    background: url('../icons/pass-icon.png') no-repeat center;
+    background-size: contain;
+}
+
+input.form-control {
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn {
+    background-color: #d83535;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #b32929;
+}

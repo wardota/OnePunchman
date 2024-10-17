@@ -11,9 +11,10 @@ body{
 }
 
 .wrapper{
-    width: 1100px;
+    width: 2200px;
     margin: auto;
     position: relative;
+    padding: 0%;
 }
 
 .logo{
@@ -26,6 +27,7 @@ body{
 
 .menu{
     float: right;
+    flex: 2;
 }
 
 nav{
@@ -44,8 +46,8 @@ nav{
 
 nav ul{
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     overflow:hidden
 }
 
@@ -75,6 +77,7 @@ section{
 .kolom{
     margin-top: 50px;
     margin-bottom: 50px;
+    margin-left: 50px;
 }
 
 .kolom .deskripsi{
@@ -104,7 +107,7 @@ a.tbl-biru{
 }
 
 a.tbl-biru:hover{
-    background-color: #EE66A6 ;
+    background-color: #130e10 ;
     text-decoration: none;
 }
 a.tbl-merah{
@@ -117,12 +120,12 @@ a.tbl-merah{
     font-weight: bold;
 }
 
-a.tbl-pink:hover{
-    background-color:blue;
+a.tbl-merah:hover{
+    background-color:rgb(9, 9, 15);
     text-decoration: none;
 }
 
 p{
     margin: 10px 0px 10px 0px;
-    padding: 10px 0px 10px 0px;
+    padding: 10px 10px 10px 10px;
 }

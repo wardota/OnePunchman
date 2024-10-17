@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  flask-app:
+    build:
+      context: .
+      dockerfile: Dockerfile  # Name of your Dockerfile
+    ports:
+      - "8080:8080"  # Map port 8080 on the host to port 8080 in the container
+    environment:
+      - PORT=8080  # Set the PORT environment variable
+    volumes:
+      - .:/app  # Optional: Mount current directory to /app in the container
+    restart: unless-stopped  # Automatically restart the container unless it is stopped manually

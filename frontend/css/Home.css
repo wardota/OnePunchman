@@ -21,7 +21,7 @@ body{
     font-weight: bold;
     float: left;
     font-family: courier;
-    color: #001F3F;
+    color: #d8e0e7;
 }
 
 .menu{
@@ -36,7 +36,10 @@ nav{
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    background-color: aliceblue;
+    background-color: rgb(216, 15, 15);
+    z-index: 1;
+    border-bottom: 1px solid #090a0c;
+
 }
 
 nav ul{
@@ -48,10 +51,11 @@ nav ul{
 
 nav ul li{
     float: left;
+    
 }
 
 nav ul li a{
-    color: black;
+    color: rgb(245, 240, 240);
     font-weight: bold;
     text-align: center;
     padding: 0px 16px 0px 16px;
@@ -77,24 +81,24 @@ section{
     font-size: 20px;
     font-weight: bold;
     font-family: 'comic sans ms';
-    color: #001F3F;
+    color: #07090c;
 }
 
-.h{
+.h2{
     font-family: 'comic sans ms';
     font-weight: bold;
     font-size: 45px;
-    color: #001F3F;
+    color: #eaeff5;
     width: 100%;
     line-height: 50px;
 }
 
 a.tbl-biru{
-    background-color: blue;
+    background-color: rgb(221, 221, 235);
     border-radius: 20px;
     margin: 20px;
     padding: 15px 20px 15px 20px;
-    color: aliceblue;
+    color: rgb(204, 14, 71);
     cursor: pointer;
     font-weight: bold;
 }
@@ -103,12 +107,12 @@ a.tbl-biru:hover{
     background-color: #EE66A6 ;
     text-decoration: none;
 }
-a.tbl-pink{
-    background-color: #EE66A6;
+a.tbl-merah{
+    background-color: rgb(221, 221, 235);
     border-radius: 20px;
     margin: 20px;
     padding: 15px 20px 15px 20px;
-    color: aliceblue;
+    color: rgb(204, 14, 71);
     cursor: pointer;
     font-weight: bold;
 }

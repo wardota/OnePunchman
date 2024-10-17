@@ -2,6 +2,7 @@
     text-decoration: none;
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body{
@@ -10,12 +11,12 @@ body{
     font-family: 'open sans', sans-serif;
 }
 
-.wrapper{
-    width: 2200px;
-    margin: auto;
-    position: relative;
-    padding: 0%;
+.wrapper {
+    width: 100%;
+    margin: 0 auto; /* Pastikan tidak ada margin yang menghalangi */
+    padding: 0; /* Pastikan padding tidak menyebabkan masalah */
 }
+
 
 .logo a{
     font-size: 50px;
@@ -42,7 +43,9 @@ nav{
     background-color: rgb(216, 15, 15);
     z-index: 1;
     border-bottom: 1px solid #090a0c;
-
+    justify-content: space-between; /* Menjaga jarak antara logo dan menu */
+    align-items: center; /* Memastikan item ter-align secara vertikal */
+    padding: 0 50px; /* Menambahkan padding untuk ruang */
 }
 
 nav ul{
@@ -69,16 +72,16 @@ nav ul li a:hover{
     text-decoration: underline;
 }
 
-section{
-    margin: auto;
+section {
     display: flex;
+    flex-wrap: wrap; /* Memungkinkan elemen untuk membungkus saat ruang terbatas */
+    margin: auto;
     margin-bottom: 50px;
 }
 
-.kolom{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 50px;
+.kolom {
+    flex: 1; /* Memungkinkan kolom mengambil ruang yang tersedia */
+    margin: 20px; /* Menambahkan margin untuk memberi jarak */
 }
 
 .kolom .deskripsi{
@@ -88,10 +91,11 @@ section{
     color: #07090c;
 }
 
-.gambar{
-    width: 50%;
+.gambar {
+    max-width: 90%; /* Menghindari gambar melampaui lebar container */
     height: auto;
 }
+
 
 h2{
     font-family: 'comic sans ms';
@@ -142,16 +146,17 @@ p{
     width: 100%;
 }
 
-.Team-List{
-    width: 100%;
-    position: relative;
+.Team-List {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Memungkinkan kartu tim untuk membungkus jika diperlukan */
+    justify-content: center; /* Menyusun kartu tim secara horizontal di tengah */
 }
 
-.kartu-Team{
-    width: 20%;
-    margin: 0 auto;
+/* Atur ukuran kartu tim */
+.kartu-Team {
+    flex: 1 0 20%; /* Flex-grow, flex-shrink, dan basis */
+    max-width: 200px; /* Menetapkan lebar maksimum untuk kartu tim */
+    margin: 10px; /* Menambahkan margin untuk jarak antar kartu */
 }
 
 .kartu-Team img {
@@ -170,16 +175,16 @@ p{
 
 .box-contact {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    row-gap: 50px;
-    justify-content: center;
-    padding-top: 200px;
+    justify-content: center; /* Pusatkan elemen secara horizontal */
+    align-items: center; /* Sejajarkan elemen secara vertikal */
+    flex-wrap: wrap; /* Mengizinkan elemen untuk membungkus ke baris berikutnya jika diperlukan */
+    gap: 20px; /* Menambahkan jarak antar elemen */
+    padding: 20px; /* Tambahkan padding di sekitar container */
 
 }
   
 .box-contact .box {
-    width: 200px;
+    flex: 1 0 200px; /* Mengizinkan box untuk tumbuh */
     text-align: center;
     color: rgb(0, 0, 0);
 }
@@ -258,20 +263,43 @@ p{
     font-weight: bold;
     margin-inline: 5px;
 }
-  
+
+section {
+width: 100%;
+justify-content: center;
+}
+/* Mengatur box developer */
 .box-developer {
     display: grid;
-    grid-template-columns: 2fr auto 2fr;
-    column-gap: 500px;
-    align-items: center;
-    background-color: #07090c;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
     padding: 50px;
-}
-  
-.box-developer .box {
+    background-color: #07090c;
     color: rgb(250, 243, 243);
-    padding-left: 10px;
+    text-align: center;
+    width: 100%; /* Menetapkan lebar footer menjadi 100% */
+    position: relative; /* Menghindari masalah positioning */
+    overflow: hidden;
 }
+
+
+/* Atur setiap box di footer */
+.box-developer .box {
+    padding: 10px; /* Padding di dalam box */
+}
+
+/* Link dalam box developer */
+.box-developer .box a {
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    color: white; /* Warna teks link */
+    font-weight: 200; /* Ketebalan font */
+    transition: color 0.3s; /* Efek transisi saat hover */
+}
+
+.box-developer .box a:hover {
+    color: rgb(221, 221, 235); /* Warna saat hover */
+}
+
   
 .box-developer .box:nth-child(2) {
     display: flex;
@@ -302,3 +330,4 @@ p{
 .box-developer .box:nth-child(3) span {
     font-weight: bold;
 }
+

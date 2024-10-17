@@ -49,7 +49,7 @@ nav ul{
     list-style-type: none;
     margin: 0px;
     padding: 0px;
-    overflow:hidden
+    overflow:hidden;
 }
 
 nav ul li{
@@ -86,6 +86,11 @@ section{
     font-weight: bold;
     font-family: 'comic sans ms';
     color: #07090c;
+}
+
+.gambar{
+    width: 50%;
+    height: auto;
 }
 
 h2{
@@ -132,12 +137,44 @@ p{
     padding: 10px 10px 10px 10px;
 }
 
+.tengah{
+    text-align: center;
+    width: 100%;
+}
+
+.Team-List{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.kartu-Team{
+    width: 20%;
+    margin: 0 auto;
+}
+
+.kartu-Team img {
+    width: 80%;
+    border-radius: 50%;
+}
+
+.kartu-Team p{
+    font-family: 'comic sans ms';
+    font-weight: 800;
+    font-size: 25px;
+    text-align: center;
+    color: #0d0e0f;
+    height: auto;
+}
+
 .box-contact {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     row-gap: 50px;
     justify-content: center;
+    padding-top: 200px;
 
 }
   

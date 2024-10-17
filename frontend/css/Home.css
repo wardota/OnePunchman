@@ -131,3 +131,137 @@ p{
     margin: 10px 0px 10px 0px;
     padding: 10px 10px 10px 10px;
 }
+
+.box-contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 50px;
+    justify-content: center;
+
+}
+  
+.box-contact .box {
+    width: 200px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+  
+.box-contact .box i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #747577;
+}
+  
+.box-contact .box p {
+    font-weight: 300px;
+}
+
+.chat {
+    padding: 10px 0 100px 0;
+}
+  
+.box-chat {
+    color: rgb(10, 9, 9);
+    text-align: center;
+}
+  
+.box-chat h1 {
+    margin-bottom: 20px;
+}
+
+.box-chat h3 {
+    font-weight: 400;
+    margin-bottom: 10px;
+    animation: animasi;
+    -webkit-animation: animasi 2s infinite;
+}
+  
+  @keyframes animasi {
+    0% {
+      transform: scale(1);
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+    }
+}
+  
+.chat.box-chat button {
+    border: none;
+    min-width: 100px;
+    min-height: 40px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+    background-color: #b81010;
+    color: white;
+    padding-inline: 10px;
+}
+  
+.chat.box-chat button i {
+    font-size: 16px;
+    font-weight: bold;
+    margin-inline: 5px;
+}
+  
+.box-developer {
+    display: grid;
+    grid-template-columns: 2fr auto 2fr;
+    column-gap: 500px;
+    align-items: center;
+    background-color: #07090c;
+    padding: 50px;
+}
+  
+.box-developer .box {
+    color: rgb(250, 243, 243);
+    padding-left: 10px;
+}
+  
+.box-developer .box:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+  
+.box-developer .box:nth-child(2) a {
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+}
+  
+.box-developer .box p {
+    font-weight: 200;
+}
+  
+.box-developer .box:nth-child(1) p {
+    font-size: 12px;
+    line-height: 2;
+    margin-top: 10px;
+}
+  
+.box-developer .box:nth-child(3) {
+    text-align: center;
+}
+  
+.box-developer .box:nth-child(3) span {
+    font-weight: bold;
+}

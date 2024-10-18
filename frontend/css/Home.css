@@ -9,6 +9,7 @@ body{
     margin: 0px;
     padding: 0px;
     font-family: 'open sans', sans-serif;
+
 }
 
 .wrapper {
@@ -162,6 +163,11 @@ p{
 .kartu-Team img {
     width: 80%;
     border-radius: 50%;
+    width: 150px; /* Tetapkan ukuran lebar */
+    height: 150px; /* Tetapkan ukuran tinggi agar menjadi 1:1 */
+    border-radius: 50%; /* Membuat gambar berbentuk lingkaran */
+    object-fit: cover;
+    object-position: center 10%;
 }
 
 .kartu-Team p{
@@ -184,7 +190,9 @@ p{
 }
   
 .box-contact .box {
-    flex: 1 0 200px; /* Mengizinkan box untuk tumbuh */
+    flex: 1 0 200px; /* Menetapkan ukuran dasar 200px, dan mengizinkan box untuk tumbuh */
+    min-width: 150px; /* Tetapkan lebar minimum agar box tidak mengecil terlalu banyak */
+    max-width: 300px; /* Tetapkan lebar maksimum */
     text-align: center;
     color: rgb(0, 0, 0);
 }
@@ -265,8 +273,8 @@ p{
 }
 
 section {
-width: 100%;
-justify-content: center;
+    width: 100%;
+    justify-content: center;
 }
 /* Mengatur box developer */
 .box-developer {

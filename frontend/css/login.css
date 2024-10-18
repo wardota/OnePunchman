@@ -38,7 +38,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding-top: 80px; /* Add padding to prevent content from being hidden behind the navbar */
+    padding-top: 80px;
+    background-image: url('../img/background.jpg');
+    background-size: cover; /* Membuat gambar memenuhi seluruh layar */
+    background-position: center; /* Memposisikan gambar di tengah */
+    background-repeat: no-repeat; /* Mencegah gambar diulang */
 }
 
 .container {

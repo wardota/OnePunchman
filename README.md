@@ -5,7 +5,7 @@ Tugas Cloud Computing
 - Refaldzah Ihtifazuddin Handoko( 1101223133 )\
 - Dwaynimay Farrel Rajendra( 1101223235 )
 
-[Main branchl](https://github.com/wardota/OnePunchman/tree/main) is only for scratch, not integrated betwwen front end and backend\
+[Main branchl](https://github.com/wardota/OnePunchman/tree/main) is only for scratch, not integrated between frontend and backend\
 [Deploygcp branchl](https://github.com/wardota/OnePunchman/tree/deploygcp) is the integrated one and functional, tutorial and description WIP\
 
 

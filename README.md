@@ -5,7 +5,7 @@ Main branch is not integrated
 Deploygcp branch is the integrated and functional
 
 
-You can check the delopyed apps in: 
+You can check the deployed apps in: 
 
 https://flask-firebase-app-768997061046.asia-southeast1.run.app/
 

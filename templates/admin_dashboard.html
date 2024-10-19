@@ -1,6 +1,62 @@
-<html>
+<!-- <html>
 <body>
     <h2>Welcome, {{ username }} (Admin)</h2>
+    <h2>Welcome, {{ nim }} (Admin)</h2>
+    <h2>Welcome, {{ name }} (Admin)</h2>
+    <h2>Welcome, {{ img_url }} (Admin)</h2>
+    <h2>Welcome, {{ git_url }} (Admin)</h2>
+    <p>{{ qotd }}</p>
     <a href="/logout">Logout</a>
+    <section id="home">
+        <img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-2717.jpg?t=st=1729100577~exp=1729104177~hmac=8e858c9d6028b606cd1613fa2c0ea2be177e423f8aee0ee8cad97f818c13061a&w=826"/>
+        <div class="kolom">
+            <p class="deskripsi">Bintang pandu adalah orang mantep</p>
+            <img src="{{ img_url.rstrip('/') }}" style="max-width: 200px; max-height: 200px; width: auto; height: auto;">
+            <h2>{{ name }}</h2>
+            <h2>{{ nim }}</h2>
+            <p>{{ qotd }}</p>
+            <p><a href={{ git_url.rstrip('/') }} class="tbl-merah">check my github</a></p>
+        </div>
+    </section>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - {{ username }} - Onepunchman</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Home.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href=''>One Punch-Man.</a></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#account-management">Account Management</a></li>
+                    <li><a href="#setting">Setting</a></li>
+                    <li><a href="#account">Halo, {{ username }}</a></li>
+                    <li><a href="{{ url_for('logout') }}"class="tbl-biru">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper">
+        
+        <section id="home">
+            <img src="https://img.freepik.com/free-vector/pair-programming-concept-illustration_114360-1652.jpg?t=st=1729147470~exp=1729151070~hmac=52eea6086cb45945998935535fb9a8aa717f172c1b75e6947d110c517c06158b&w=996"/>
+            <div class="kolom">
+                <p class="deskripsi">Profile</p>
+                <img src="{{ img_url.rstrip('/') }}" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover;">
+
+
+                <h2>{{ name }}</h2>
+                <h2>{{ nim }}</h2>
+                <p>{{ qotd }}</p>
+                <p><a href={{ git_url.rstrip('/') }} class="tbl-merah">link github</a></p>
+            </div>
+        </section>       
+    </div>
 </body>
 </html>

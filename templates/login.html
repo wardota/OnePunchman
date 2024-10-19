@@ -4,27 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login OPM</title>
-    <link rel="stylesheet" href="frontend/css/login.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
 </head>
 <body>
     <nav>
         <div class="logo"><a href=''>One Punch-Man. </a></div>
     </nav>
-
     <div class="container">
         <h2 class="subheading">Welcome to One Punch-Man!</h2>
         <h1 class="heading">LOGIN OPM</h3>
     
         <div class="form">
-            
             <div class="auth-page">
                 <div class="card-body">
-                    <form>
+                    <!-- Ensure form uses POST and sends data to server -->
+                    <form method="POST" action="/login">
                         <div class="form-group">
                             <label for="username" class="label">Username</label>
                             <div class="input-group">
                                 <span class="auth-input-logo user-icon"></span>
-                                <input id="username" type="text" placeholder="username" autocomplete="username" class="form-control" required>
+                                <input id="username" name="username" type="text" placeholder="Username" autocomplete="username" class="form-control" required>
                             </div>
                         </div>
     
@@ -32,20 +31,19 @@
                             <label for="password" class="label">Password</label>
                             <div class="input-group">
                                 <span class="auth-input-logo pass-icon"></span>
-                                <input id="password" type="password" placeholder="password" autocomplete="current-password" class="form-control" required>
+                                <input id="password" name="password" type="password" placeholder="Password" autocomplete="current-password" class="form-control" required>
                             </div>
                         </div>
     
                         <div class="form-group">
-                            <button class="btn" type="submit">Log In</button>
-                        </div>
+                            <input class="btn" type="submit" value="Login">
+                        </div><a href="/register" style="text-decoration: none;font-weight: bold;font-size: small;color:red ">register</a>
                     </form>
                 </div>
             </div>
         </div>
-
     </div>
-
-    <script src="js/form.js"></script>
+    
+    <script src="{{ url_for('static', filename='js/form.js') }}"></script>
 </body>
 </html>

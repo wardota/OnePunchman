@@ -4,33 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* Navbar styling */
-nav {
-    width: 100%;
-    display: flex;
-    align-items: center; /* Ensure items are vertically aligned in the center */
-    line-height: 80px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgb(216, 15, 15);
-    z-index: 1;
-    border-bottom: 1px solid #090a0c;
-}
 
-/* Styling for logo to remove underline and ensure inline display */
-.logo a {
-    font-size: 50px;
-    font-weight: bold;
-    font-family: Courier, monospace;
-    color: #ffffff;
-    padding-left: 50px;
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Ensure it's inline with other navbar elements */
-    white-space: nowrap;
-}
-
-/* Adjust body styling to avoid overlapping with navbar */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -38,11 +12,29 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding-top: 80px;
-    background-image: url('../img/background.jpg');
-    background-size: cover; /* Membuat gambar memenuhi seluruh layar */
-    background-position: center; /* Memposisikan gambar di tengah */
-    background-repeat: no-repeat; /* Mencegah gambar diulang */
+}
+
+/* Navbar styling */
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999; /* Ensure navbar stays on top */
+}
+
+.navbar-container {
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 100px;
 }
 
 .container {
@@ -63,15 +55,12 @@ body {
     font-size: 18px;
     color: #333;
     margin: 10px 0;
-    font-family: 'comic sans ms';
-    text-align: center;
 }
 
 .subheading {
     font-size: 12px;
     color: #333;
     margin-bottom: 20px;
-    font-family: 'comic sans ms';
 }
 
 .form-group {

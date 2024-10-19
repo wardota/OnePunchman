@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - {{ username }} - Onepunchman</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Home.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href=''>One Punch-Man.</a></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#tentangkami">Tentang Kami</a></li>
+                    <li><a href="#account">Halo, {{ username }}</a></li>
+                    <li><a href="{{ url_for('logout') }}"class="tbl-biru">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper">
+        
+        <section id="home">
+            <img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-2717.jpg?t=st=1729100577~exp=1729104177~hmac=8e858c9d6028b606cd1613fa2c0ea2be177e423f8aee0ee8cad97f818c13061a&w=826"/>
+            <div class="kolom">
+                <p class="deskripsi">Profile</p>
+                <img src="{{ img_url.rstrip('/') }}" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover;">
+
+
+                <h2>{{ name }}</h2>
+                <h2>{{ nim }}</h2>
+                <p>{{ qotd }}</p>
+                <p><a href={{ git_url.rstrip('/') }} class="tbl-merah">link github</a></p>
+            </div>
+        </section>       
+    </div>
+</body>
+</html>

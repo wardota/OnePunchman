@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login OPM</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <img src="{{ url_for('static', filename='img/opm-logo.png') }}" alt="OPM Logo" class="logo">
+        </div>
+    </nav>
+    <div class="container">
+        <h2 class="subheading">Register to One Punch-Man!</h2>
+        <h1 class="heading">Register OPM</h3>
+    
+        <div class="form">
+            
+            <div class="auth-page">
+                <div class="card-body">
+                    <form action="/register" method="POST">
+                        <div class="form-group">
+                            <label for="name" class="label">Name</label>
+                            <div class="input-group">
+                                <span class="auth-input-logo user-icon"></span>
+                                <input id="name" type="text" placeholder="name" autocomplete="name" name="name" class="form-control" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="username" class="label">Username</label>
+                            <div class="input-group">
+                                <span class="auth-input-logo user-icon"></span>
+                                <input name="username" id="username" type="text" placeholder="username" autocomplete="username" class="form-control" required>
+                            </div>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="password" class="label">Password</label>
+                            <div class="input-group">
+                                <span class="auth-input-logo pass-icon"></span>
+                                <input name="password" id="password" type="password" placeholder="Password" class="form-control" required>
+                            </div>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="nim" class="label">NIM</label>
+                            <div class="input-group">
+                                <input name="nim" id="nim" type="number" placeholder="insert nim" class="form-control" required>
+                            </div>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="role" class="label">Role</label>
+                            <div class="input-group">
+                                <select id="role" name="role" class="form-control" required>
+                                    <option value="customer">Customer</option>
+                                    <option value="admin">Admin</option>
+                                </select>
+                            </div>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="img_url" class="label">Profile Image URL (optional):</label>
+                            <div class="input-group">
+                                <input class="form-control" type="text" id="img_url" name="img_url" placeholder="https://example.com/image.jpg">
+                            </div>
+                        </div>
+                    
+                        <div class="form-group">
+                            <input class="btn" type="submit" value="Register">
+                        </div>
+                    </form>
+                    
+                
+                    <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a>.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="{{ url_for('static', filename='js/form.js') }}"></script>
+</body>
+</html>

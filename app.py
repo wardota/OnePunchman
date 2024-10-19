@@ -60,7 +60,7 @@ def register():
     return render_template('register.html')
 
 # Login route
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def login():
     if 'username' in session:
         if session['role'] == 'admin':
@@ -83,20 +83,18 @@ def login():
             session['img_url'] = user['img_url']
             session['qotd'] = generate_quote()
             session['git_url'] = f'https://github.com/{username}'
-            print(session['qotd'])
-
             
             # Redirect based on role
             if user['role'] == 'admin':
-                return redirect('/admin_dashboard')
+                return redirect('/home')
             elif user['role'] == 'customer':
-                return redirect('/customer_dashboard')
+                return redirect('/home')
             else:
                 return redirect('/')
         else:
             return invalid_credentials(401)
 
-    return render_template('login.html')
+    return render_template('index.html')
 
 # Customer dashboard
 @app.route('/customer_dashboard')
@@ -118,14 +116,14 @@ def index():
         loginText=session['username'] 
 
     return render_template('index.html',loginText=loginText)
-@app.route('/logged')
-def logged():
+@app.route('/home')
+def home():
+    loginText='Login'
     if 'username' in session:
         if session['role'] == 'admin':
-            return redirect('/admin_dashboard')
+            return render_template('home.html',to_dashboard='/admin_dashboard',qotd=session['qotd'])
         elif session['role'] == 'customer':
-            return redirect('/customer_dashboard')
-    return render_template('index.html',loginText='Login')
+            return render_template('home.html',to_dashboard='/customer_dashboard',qotd=session['qotd'])
 # Logout route
 @app.route('/logout')
 def logout():

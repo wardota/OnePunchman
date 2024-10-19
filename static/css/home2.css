@@ -1,0 +1,341 @@
+*{
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'open sans', sans-serif;
+
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto; /* Pastikan tidak ada margin yang menghalangi */
+    padding: 0; /* Pastikan padding tidak menyebabkan masalah */
+}
+
+
+.logo a{
+    font-size: 50px;
+    font-weight: bold;
+    float: left;
+    font-family: courier;
+    color: #ffffff;
+    padding-left: 50px;
+}
+
+.menu{
+    float: right;
+    flex: 2;
+}
+
+nav{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    line-height: 80px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background-color: rgb(216, 15, 15);
+    z-index: 1;
+    border-bottom: 1px solid #090a0c;
+    justify-content: space-between; /* Menjaga jarak antara logo dan menu */
+    align-items: center; /* Memastikan item ter-align secara vertikal */
+    padding: 0 50px; /* Menambahkan padding untuk ruang */
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow:hidden;
+}
+
+nav ul li{
+    float: left;
+    
+}
+
+nav ul li a{
+    color: rgb(245, 240, 240);
+    font-weight: bold;
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap; /* Memungkinkan elemen untuk membungkus saat ruang terbatas */
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.kolom {
+    flex: 1; /* Memungkinkan kolom mengambil ruang yang tersedia */
+    margin: 20px; /* Menambahkan margin untuk memberi jarak */
+}
+
+.kolom .deskripsi{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'comic sans ms';
+    color: #07090c;
+}
+
+.gambar {
+    max-width: 90%; /* Menghindari gambar melampaui lebar container */
+    height: auto;
+}
+
+
+h2{
+    font-family: 'comic sans ms';
+    font-weight: bold;
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #0d0e0f;
+    width: 100%;
+    line-height: 50px;
+}
+
+a.tbl-satu{
+    background-color: rgb(221, 221, 235);
+    border-radius: 20px;
+    margin: 20px;
+    padding: 15px 20px 15px 20px;
+    color: rgb(204, 14, 71);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+a.tbl-satu:hover{
+    background-color: #130e10 ;
+    text-decoration: none;
+}
+a.tbl-dua{
+    background-color: rgb(221, 221, 235);
+    border-radius: 20px;
+    margin: 20px;
+    padding: 15px 20px 15px 20px;
+    color: rgb(204, 14, 71);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+a.tbl-dua:hover{
+    background-color:rgb(9, 9, 15);
+    text-decoration: none;
+}
+
+p{
+    margin: 10px 0px 10px 0px;
+    padding: 10px 10px 10px 10px;
+}
+
+.tengah{
+    text-align: center;
+    width: 100%;
+}
+
+.Team-List {
+    display: flex;
+    flex-wrap: wrap; /* Memungkinkan kartu tim untuk membungkus jika diperlukan */
+    justify-content: center; /* Menyusun kartu tim secara horizontal di tengah */
+}
+
+/* Atur ukuran kartu tim */
+.kartu-Team {
+    flex: 1 0 20%; /* Flex-grow, flex-shrink, dan basis */
+    max-width: 200px; /* Menetapkan lebar maksimum untuk kartu tim */
+    margin: 10px; /* Menambahkan margin untuk jarak antar kartu */
+}
+
+.kartu-Team img {
+    width: 80%;
+    border-radius: 50%;
+    width: 150px; /* Tetapkan ukuran lebar */
+    height: 150px; /* Tetapkan ukuran tinggi agar menjadi 1:1 */
+    border-radius: 50%; /* Membuat gambar berbentuk lingkaran */
+    object-fit: cover;
+    object-position: center 10%;
+}
+
+.kartu-Team p{
+    font-family: 'comic sans ms';
+    font-weight: 800;
+    font-size: 25px;
+    text-align: center;
+    color: #0d0e0f;
+    height: auto;
+}
+
+.box-contact {
+    display: flex;
+    justify-content: center; /* Pusatkan elemen secara horizontal */
+    align-items: center; /* Sejajarkan elemen secara vertikal */
+    flex-wrap: wrap; /* Mengizinkan elemen untuk membungkus ke baris berikutnya jika diperlukan */
+    gap: 20px; /* Menambahkan jarak antar elemen */
+    padding: 20px; /* Tambahkan padding di sekitar container */
+
+}
+  
+.box-contact .box {
+    flex: 1 0 200px; /* Menetapkan ukuran dasar 200px, dan mengizinkan box untuk tumbuh */
+    min-width: 150px; /* Tetapkan lebar minimum agar box tidak mengecil terlalu banyak */
+    max-width: 300px; /* Tetapkan lebar maksimum */
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+  
+.box-contact .box i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #747577;
+}
+  
+.box-contact .box p {
+    font-weight: 300px;
+}
+
+.chat {
+    padding: 10px 0 100px 0;
+}
+  
+.box-chat {
+    color: rgb(10, 9, 9);
+    text-align: center;
+}
+  
+.box-chat h1 {
+    margin-bottom: 20px;
+}
+
+.box-chat h3 {
+    font-weight: 400;
+    margin-bottom: 10px;
+    animation: animasi;
+    -webkit-animation: animasi 2s infinite;
+}
+  
+  @keyframes animasi {
+    0% {
+      transform: scale(1);
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+    }
+}
+  
+.chat.box-chat button {
+    border: none;
+    min-width: 100px;
+    min-height: 40px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+    background-color: #b81010;
+    color: white;
+    padding-inline: 10px;
+}
+  
+.chat.box-chat button i {
+    font-size: 16px;
+    font-weight: bold;
+    margin-inline: 5px;
+}
+
+section {
+    width: 100%;
+    justify-content: center;
+}
+/* Mengatur box developer */
+.box-developer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 50px;
+    background-color: #07090c;
+    color: rgb(250, 243, 243);
+    text-align: center;
+    width: 100%; /* Menetapkan lebar footer menjadi 100% */
+    position: relative; /* Menghindari masalah positioning */
+    overflow: hidden;
+}
+
+
+/* Atur setiap box di footer */
+.box-developer .box {
+    padding: 10px; /* Padding di dalam box */
+}
+
+/* Link dalam box developer */
+.box-developer .box a {
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    color: white; /* Warna teks link */
+    font-weight: 200; /* Ketebalan font */
+    transition: color 0.3s; /* Efek transisi saat hover */
+}
+
+.box-developer .box a:hover {
+    color: rgb(221, 221, 235); /* Warna saat hover */
+}
+
+  
+.box-developer .box:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+  
+.box-developer .box:nth-child(2) a {
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+}
+  
+.box-developer .box p {
+    font-weight: 200;
+}
+  
+.box-developer .box:nth-child(1) p {
+    font-size: 12px;
+    line-height: 2;
+    margin-top: 10px;
+}
+  
+.box-developer .box:nth-child(3) {
+    text-align: center;
+}
+  
+.box-developer .box:nth-child(3) span {
+    font-weight: bold;
+}
+

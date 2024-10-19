@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onepunchman</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home2.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href=''>One Punch-Man. </a></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <!-- <li><a href="#Our Project">Our Project</a></li> -->
+                    <li><a href="#TEAM">Team</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                    <li>
+                        <a href="{{ to_dashboard }}" class="tbl-satu">
+                           My Account
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <!--untuk home-->
+        <section id="Home">
+            <img src="https://img.freepik.com/free-vector/pair-programming-concept-illustration_114360-1652.jpg?t=st=1729147470~exp=1729151070~hmac=52eea6086cb45945998935535fb9a8aa717f172c1b75e6947d110c517c06158b&w=996" class="gambar">
+            <div class="kolom">
+                <p class="deskripsi">Cloud Computing</p>
+                <h2>Tetap sehat, Bahagia selalu</h2>
+                <p>{{ qotd }}</p>
+                <p><a href=""class="tbl-satu">pelajari lebih lanjut</a></p>
+            </div>
+        </section>
+
+        <!-- untuk Our Project
+        <section id="Our Project">
+                 <div class="kolom">
+                     <p class="deskripsi">You will need this</p>
+                     <h2>Bagian yang mungkin anda butuhkan</h2>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, omnis est! Sapiente, velit veniam? Quia consectetur aspernatur quis saepe porro?</p>
+                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, sint reprehenderit laudantium deserunt nisi cumque ad sapiente quidem sed culpa.</p>
+                       <p><a href=""class="tbl-dua">Pelajari Lebih lanjut</a></p>
+                 </div>
+                  <img src="https://img.freepik.com/free-vector/alone-concept-illustration_114360-2393.jpg?t=st=1729178508~exp=1729182108~hmac=d69790099c50cffd2790f5471b67a32f3c7edce628ebcf5fe94f7f3e0b66c190&w=1380" class="gambar">
+         </section> -->
+
+
+        <!--untuk TEAM-->
+        <section id="TEAM">
+            <div class="tengah">
+                <div class="kolom">
+                    <p class="deskripsi">Our Top TEAM</p>
+                    <h2>TEAM</h2>
+                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, pariatur.</P>
+                </div>
+
+                <div class="Team-List">
+                    <div class="kartu-Team">
+                        <img src="{{ url_for('static', filename='img/pfp_bintang.jpg') }}"/>
+                        <p>Bintang Pandu Anugrah</p>
+                    </div>
+                    <div class="kartu-Team">
+                        <img src="{{ url_for('static', filename='img/pfp_farrel.jpg') }}"/>
+                        <p>Dwaynimay Farrel Rajendra</p>
+                    </div>
+                    <div class="kartu-Team">
+                        <img src="{{ url_for('static', filename='img/pfp_dimas.jpeg') }}"/>
+                        <p>Dimas Bayu</p>
+                    </div>
+                    <div class="kartu-Team">
+                        <img src="{{ url_for('static', filename='img/pfp_refal.jpg') }}"/>
+                        <p>Refaldzah</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--contacts-->
+        <section id="Contact">
+              <div class="box-contact">
+                <div class="box">
+                  <i class="fa-solid fa-phone"></i>
+                  <h4>Call-center</h4>
+                  <p>(+62)8xxxxxx</p>
+                </div>
+
+                <div class="box">
+                  <i class="fa-brands fa-line"></i>
+                  <h4>ID Line</h4>
+                  <p>@xxxxxx</p>
+                </div>
+
+                <div class="box">
+                  <i class="fa-brands fa-square-instagram"></i>
+                  <h4>Instagram</h4>
+                  <p>@xxxxxx</p>
+                </div>
+              </div>
+        </section>
+
+        <!-- <div class="chat">
+            <div class="box-chat">
+              <h1>
+                Any Question?
+              </h1>
+              <h3>Click This Link Bellow!</h3>
+              <button><i class="fa-brands fa-whatsapp"></i> Whatsapp</button>
+              <button><i class="fa-regular fa-envelope"></i> Gmail</button>
+            </div>
+        </div>
+     -->
+        <!-- Developer -->
+        <section id="Developer">
+              <div class="box-developer">
+                  <div class="box">
+                      <h3>KELOMPOK 06</h3>
+                      <p>Cloud Computing<br>Telkom University</p>
+                  </div>
+                  <!-- <div class="box">
+                      <h3>Menu</h3>
+                      <a href="#Home">Home</a>
+                      <a href="#Our Project">Our Project</a>
+                      <a href="#TEAM">Team</a>
+                      <a href="#Contact">Contact</a>
+                  </div> -->
+                  <div class="box">
+                      <p>&copy; 2024 Copyright by <span>One Punch-Man.</span> All Rights Reserved</p>
+                  </div>
+              </div>
+      </section>
+     
+    </div>
+</body>
+</html>

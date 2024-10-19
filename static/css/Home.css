@@ -10,18 +10,21 @@ body{
     font-family: 'open sans', sans-serif;
 }
 
-.wrapper{
-    width: 1100px;
-    margin: auto;
-    position: relative;
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto; /* Pastikan tidak ada margin yang menghalangi */
+    padding: 0; /* Pastikan padding tidak menyebabkan masalah */
 }
 
-.logo{
+
+.logo a{
     font-size: 50px;
     font-weight: bold;
     float: left;
     font-family: courier;
-    color: #d8e0e7;
+    color: #ffffff;
+    padding-left: 50px;
 }
 
 .menu{
